@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arithmetic"
+version = "1.0.0"
+description = "A simple arithmetic library to handle addition, substraction, multiplication and division"
+authors = [
+    {name="Sheila Sawe", email="sawesheila21@gmail.com"}
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tools.setuptools.packages]
+where = ["."]
+
+[tool.pytest.ini_options]
+python_files  = "tests/**"
+
+addopts = ["--cov=src", "--cov-report=html"]
+log_cli = true
+log_cli_level = "DEBUG"
+
+
